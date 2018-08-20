@@ -1,0 +1,9 @@
+pages:
+  stage: deploy
+  script:
+    - echo "Copying public dic..."
+  artifacts:
+    paths:
+      - www
+  only:
+    - master
