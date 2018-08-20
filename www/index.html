@@ -18,17 +18,120 @@
   <![endif]-->
 
   <div class="dashboard">
-      <h1>Hello world!</h1>
-    <nav class="menu">
-  <button class="navbar-toggler" type="button" data-target="#menu" aria-expanded="false">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <a class="" href="#">Navbar</a>
-
-  <div id="menu">
     
+
+
+
+
+
+<nav class="menu">
+  <div class="menu__profile">
+    
+
+  <div class="menu__user user">
+    <img src="assets/imgs/menu__user-img.png" alt="User Image" class="user__img" width="59" height="59">
+
+    <p class="user__info">
+      <span class="user__name">David G. </span>
+      <span class="user__job user__job--type--investor">Investor</span>
+    </p>
   </div>
+
+
+
+    <a class="button button--theme--empty" type="button" name="add-contact" href="#">Add contact</a>
+  </div>
+
+  
+  <ul  class="menu__list  ">
+    
+      <li class="menu__item item--icon item--icon--profile">
+
+        
+          <a class="menu__link" href="#">my profile</a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link" href="#">dashboard</a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link" href="#">my profile</a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link" href="#">projects</a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          
+
+          <a class="menu__link menu__link--toggler" href="#menu-list-contracts" data-toggle="collapse" aria-expanded="false" aria-controls="menu-list-contracts">contracts</a>
+
+          
+  <ul id=menu-list-contracts class="menu__list menu__list--level--two collapse">
+    
+      <li class="menu__item item--liststyle item--liststyle--green">
+
+        
+          <a class="menu__link" href="#">active</a>
+        
+      </li>
+    
+      <li class="menu__item item--liststyle item--liststyle--blue">
+
+        
+          <a class="menu__link" href="#">pending</a>
+        
+      </li>
+    
+      <li class="menu__item item--liststyle item--liststyle--purple">
+
+        
+          <a class="menu__link" href="#">disputes</a>
+        
+      </li>
+    
+      <li class="menu__item item--liststyle item--liststyle--orange">
+
+        
+          <a class="menu__link" href="#">drafts</a>
+        
+      </li>
+    
+      <li class="menu__item item--liststyle item--liststyle--grey">
+
+        
+          <a class="menu__link" href="#">closed</a>
+        
+      </li>
+    
+  </ul>
+
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link" href="#">settings</a>
+        
+      </li>
+    
+  </ul>
+
 </nav>
 
   </div>

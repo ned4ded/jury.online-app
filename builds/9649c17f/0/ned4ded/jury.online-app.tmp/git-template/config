@@ -1,0 +1,4 @@
+[fetch]
+	recurseSubmodules = false
+[http "https://gitlab.com"]
+	sslCAInfo = /home/ned4ded/dev/jury.online-app/builds/9649c17f/0/ned4ded/jury.online-app.tmp/CI_SERVER_TLS_CA_FILE

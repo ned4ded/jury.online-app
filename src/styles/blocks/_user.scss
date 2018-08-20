@@ -1,0 +1,16 @@
+.user {
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+  }
+
+  &__name {
+    color: white;
+  }
+
+  &__job {
+    color: white;
+  }
+}

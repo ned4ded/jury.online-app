@@ -1,11 +1,50 @@
+{% import 'partials/user.njk' as user %}
+
+{%
+  set items = [
+    { name: 'my profile', mods: 'item--icon item--icon--profile' },
+    { name: 'dashboard' },
+    { name: 'my profile' },
+    { name: 'projects' },
+    {
+      name: 'contracts',
+      list: [
+        { name: 'active', mods: 'item--liststyle item--liststyle--green' },
+        { name: 'pending', mods: 'item--liststyle item--liststyle--blue' },
+        { name: 'disputes', mods: 'item--liststyle item--liststyle--purple' },
+        { name: 'drafts', mods: 'item--liststyle item--liststyle--orange' },
+        { name: 'closed', mods: 'item--liststyle item--liststyle--grey' }
+      ]
+    },
+    { name: 'settings' }
+  ]
+%}
+
+{% macro makeList(items, mods, id) %}
+  <ul {{ 'id=' + id if id }} class="menu__list {{ mods }} {{ 'collapse' if id }}">
+    {% for item in items %}
+      <li class="menu__item {{ item.mods }}">
+
+        {% if item.list %}
+          {% set newId = 'menu-list-' + item.name %}
+
+          <a class="menu__link menu__link--toggler" href="#{{ newId }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ newId }}">{{ item.name }}</a>
+
+          {{ makeList(item.list, 'menu__list--level--two', newId) }}
+        {% else %}
+          <a class="menu__link" href="{{ item.href if item.href else '#' }}">{{ item.name }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
 <nav class="menu">
-  <button class="navbar-toggler" type="button" data-target="#menu" aria-expanded="false">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="menu__profile">
+    {{ user.modify('menu__user') }}
 
-  <a class="" href="#">Navbar</a>
-
-  <div id="menu">
-    
+    <a class="button button--theme--empty" type="button" name="add-contact" href="#">Add contact</a>
   </div>
+
+  {{ makeList(items) }}
 </nav>

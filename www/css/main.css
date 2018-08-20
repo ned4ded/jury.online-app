@@ -1,0 +1,26 @@
+.menu {
+  overflow-y: scroll;
+  width: 73.5%;
+  min-width: 275px;
+  height: 100vh;
+  background-color: #292d46; }
+  .menu__profile {
+    padding: 26px; }
+  .menu__list {
+    padding: 26px;
+    list-style: none; }
+  .menu__link {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15.5px;
+    text-transform: uppercase; }
+
+.user__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px; }
+
+.user__name {
+  color: white; }
+
+.user__job {
+  color: white; }

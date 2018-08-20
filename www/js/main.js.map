@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.js","sourcesContent":[]}
+{"version":3,"sources":["lib/layout/menu-toggle.js"],"names":["menuToggle","config","ev","preventDefault"],"mappings":"aAAA,IAAMA,WAAa,SAACC,GAAD,OAAY,SAACC,GAC9BA,EAAGC","file":"main.js","sourcesContent":["const menuToggle = (config) => (ev) => {\n  ev.preventDefault();\n}\n"]}

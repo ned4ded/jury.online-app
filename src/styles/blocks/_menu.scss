@@ -1,0 +1,25 @@
+.menu {
+  overflow-y: scroll;
+
+  width: 73.5%;
+  min-width: 275px;
+  height: 100vh;
+  // padding: 26px 19px;
+
+  background-color: $bg-dark-100;
+
+  &__profile {
+    padding: 26px;
+  }
+
+  &__list {
+    padding: 26px;
+    list-style: none;
+  }
+
+  &__link {
+    color: rgba(white, .5);
+    font-size: 15.5px;
+    text-transform: uppercase;
+  }
+}
