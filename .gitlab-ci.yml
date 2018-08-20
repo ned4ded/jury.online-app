@@ -3,9 +3,12 @@ pages:
   tags:
     - pages
   script:
-    - echo "Copying public dic..."
+    - echo "Copying public dir..."
+    - mkdir .public
+    - cp -r www/* .public
+    - mv .public public
   artifacts:
     paths:
-      - www
+      - public
   only:
     - master
