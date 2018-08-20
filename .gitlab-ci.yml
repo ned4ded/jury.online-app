@@ -1,5 +1,7 @@
 pages:
   stage: deploy
+  tags:
+    - pages
   script:
     - echo "Copying public dic..."
   artifacts:
