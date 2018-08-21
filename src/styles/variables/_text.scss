@@ -1,0 +1,9 @@
+$ff-nova: 'Proxima Nova', sans-serif;
+$ff-monserrat: 'Montserrat', sans-serif;
+
+@mixin make-ff-nova($fz: 15px, $fw: 400, $fs: normal) {
+  font-family: $ff-nova;
+  font-size: $fz;
+  font-weight: $fw;
+  font-style: $fs;
+}

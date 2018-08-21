@@ -1,3 +1,12 @@
+@import 'fonts/base.scss';
 @import './variables/base.scss';
+
+body {
+  min-width: 350px;
+}
+
+.content {
+  width: 100%;
+}
 
 @import './blocks/base.scss';

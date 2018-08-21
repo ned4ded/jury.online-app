@@ -1,25 +1,300 @@
 .menu {
-  overflow-y: scroll;
+  $p: 20px;
 
-  width: 73.5%;
-  min-width: 275px;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 100%;
   height: 100vh;
-  // padding: 26px 19px;
 
-  background-color: $bg-dark-100;
+  transition: .4s all ease-in;
+
+  @include respond-to(md) {
+    position: relative;
+    z-index: 0;
+    top: auto;
+    left: auto;
+
+    width: 250px;
+    height: 100%;
+  }
+
+
+  &--collapsed {
+    display: none;
+
+    width: 0;
+
+    @include respond-to(md) {
+      display: flex;
+
+      width: 250px;
+    }
+  }
+
+  &__side-menu {
+    overflow-y: scroll;
+
+    width: 73.5%;
+    min-width: 275px;
+    height: 100%;
+    padding: 7px 0;
+
+    background-color: $bg-dark-100;
+
+    @include respond-to(md) {
+      overflow-y: auto;
+      min-width: 0;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__lining {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    transition: background-color .4s ease-in;
+
+    background-color: rgba(49, 48, 59, 0);
+
+    .menu:not(.menu--collapsed) & {
+      z-index: -1;
+
+      background-color: rgba(49, 48, 59, 0.8);
+    }
+  }
+
+  &__block {
+    position: relative;
+
+    margin: 0 $p;
+
+    @include respond-to(md) {
+      margin: 0;
+    }
+
+    &--divider {
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 1px;
+
+        content: '';
+
+        background-color: #3e4155;
+      }
+    }
+  }
+
+  &__jot-info {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 100%;
+    min-height: 66px;
+
+    @include respond-to(md) {
+      display: none;
+    }
+  }
+
+  &__infographics {
+    width: 73.5%;
+    min-width: 275px;
+
+    background-color: $bg-dark-300;
+  }
+
+  &__add-jot {
+    width: 26.5%;
+  }
 
   &__profile {
-    padding: 26px;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+
+    padding: $p 26px;
+
+    @include respond-to(md) {
+      padding: 0 6px 12px;
+      margin: 26px 20px 0;
+    }
+  }
+
+  &__user {
+    max-width: 185px;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    width: 100%;
   }
 
   &__list {
-    padding: 26px;
+    margin-bottom: 5px;
+    padding: 2px 0;
+
     list-style: none;
+
+    @include respond-to(md) {
+      margin-bottom: 15px;
+    }
+
+    &--level {
+      &--two {
+        margin: 0;
+        padding: 9px 0;
+
+        background-color: $bg-darkest;
+      }
+    }
+
+    &--help {
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
-    color: rgba(white, .5);
-    font-size: 15.5px;
+    display: block;
+
+    min-width: 185px;
+    padding: 20px 40px 14px;
+
     text-transform: uppercase;
+
+    color: rgb(177, 183, 199);
+
+    @include make-ff-nova(15.5px, 400);
+
+    @include respond-to(md) {
+      padding: 21px 24px 7px;
+    }
+
+    &--level {
+      &--two {
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        padding: 8px 0 8px 33px;
+
+        text-transform: capitalize;
+
+        @include respond-to(md) {
+          padding: 7px 0 7px 25px;
+        }
+      }
+    }
+
+    &--help {
+      padding: 8px 46px 5px;
+
+      @include respond-to(md) {
+        text-transform: capitalize;
+      }
+
+      & .menu__link-icon { display: none; }
+    }
+
+    &-icon {
+      position: relative;
+
+      display: inline-block;
+
+      width: 20px;
+      height: 20px;
+      margin-right: 26px;
+
+      &:before {
+        display: block;
+
+        content: '';
+      }
+
+      &--liststyle {
+        &:before {
+          position: absolute;
+          top: 48%;
+          left: calc(50% + 9px);
+
+          width: 6px;
+          height: 6px;
+
+          transform: translate(-50%, -50%);
+
+          border-radius: 100%;
+          background-color: #fff;
+        }
+
+        &--green:before {
+          background-color: #7fff75;
+        }
+        &--blue:before {
+          background-color: #75c0ff;
+        }
+        &--purple:before {
+          background-color: #b375ff;
+        }
+        &--orange:before {
+          background-color: #ffb375;
+        }
+        &--grey:before {
+          background-color: #969696;
+        }
+      }
+    }
+
+    &-text {
+      display: inline-block;
+    }
+  }
+
+  &__sign-out {
+    margin-bottom: 10px;
+    padding: 0 26px;
+  }
+
+  &__logotype {
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+      padding: 35px 44px 27px;
+      background-color: rgb(41, 49, 77);
+      margin-bottom: 7px;
+    }
+  }
+
+  &__add-contact {
+    @include respond-to(md) {
+      width: 100%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      text-transform: uppercase;
+
+      border: none;
+      background-image: linear-gradient(181deg, #62cfee, #305fb4 99%);
+    }
   }
 }

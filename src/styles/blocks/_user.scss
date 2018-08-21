@@ -1,16 +1,39 @@
 .user {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+
+  @include respond-to(md) {
+    justify-content: flex-start;
+  }
 
   &__img {
     width: 60px;
     height: 60px;
+    margin-right: 16px;
+
     border-radius: 4px;
   }
 
+  &__info {
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
   &__name {
+    text-transform: capitalize;
+
     color: white;
+
+    @include make-ff-nova(24px, 500);
   }
 
   &__job {
+    @include make-ff-nova(15px, 400);
+
     color: white;
   }
 }

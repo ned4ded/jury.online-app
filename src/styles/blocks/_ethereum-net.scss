@@ -1,0 +1,22 @@
+.ethereum-net {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  padding-right: 20px;
+
+  &__text {
+    max-width: 70px;
+
+    color: #0c4a55;
+
+    font-family: $ff-monserrat;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__img {
+    margin-right: 20px;
+  }
+}

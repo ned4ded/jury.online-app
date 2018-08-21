@@ -1,0 +1,53 @@
+.infographics {
+  margin: 0;
+  padding: 0 7px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  @include respond-to(md) {
+    flex-flow: row nowrap;
+  }
+
+  &__item {
+    padding: 19px 10px 7px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @include respond-to(md) {
+      align-items: flex-end;
+      padding: 0 19px;
+    }
+  }
+
+  &__line {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @include make-ff-nova(11px, 300);
+
+    @include respond-to(md) {
+      letter-spacing: 0.8px;
+
+      color: #0c3755;
+
+      font-family: $ff-monserrat;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    &--emphasis {
+      font-family: $ff-monserrat;
+      font-size: 18px;
+      font-weight: 500;
+
+      @include respond-to(md) {
+        font-size: 28.5px;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -17,16 +17,48 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <div class="dashboard">
+  <div id="display" class="display">
     
 
 
 
 
 
-<nav class="menu">
-  <div class="menu__profile">
-    
+
+
+<div id="menu" class="menu menu--collapsed dashboard__menu">
+  <div class="menu__jot-info">
+    <ul class="infographics menu__infographics">
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">2</span>
+        <span class="infographics__line">Projects</span>
+      </li>
+
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">5089.62</span>
+        <span class="infographics__line">ETH Invested</span>
+      </li>
+
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">15.84</span>
+        <span class="infographics__line">Jot balance</span>
+      </li>
+    </ul>
+
+    <div class="menu__add-jot">
+      <a href="#" class="button button--add-jot">Add Jot</a>
+    </div>
+  </div>
+
+  <nav class="menu__side-menu">
+    <div class="menu__logotype">
+      <a href="#" class="logotype menu__logotype-link">
+        <img class="menu__logotype-img" src="assets/imgs/logotype.png" alt="Jury.Online Logotype" width="164" height="30">
+      </a>
+    </div>
+
+    <div class="menu__block menu__block--divider menu__profile">
+      
 
   <div class="menu__user user">
     <img src="assets/imgs/menu__user-img.png" alt="User Image" class="user__img" width="59" height="59">
@@ -38,38 +70,37 @@
   </div>
 
 
-
-    <a class="button button--theme--empty" type="button" name="add-contact" href="#">Add contact</a>
-  </div>
-
   
+      <a class="button button--theme--empty button--add menu__add-contact" href="#">Add contact</a>
+    </div>
+
+    
   <ul  class="menu__list  ">
     
       <li class="menu__item item--icon item--icon--profile">
 
         
-          <a class="menu__link" href="#">my profile</a>
+          <a class="menu__link   " href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">my profile</span>
+          </a>
         
       </li>
     
       <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">dashboard</a>
+          <a class="menu__link   " href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">dashboard</span>
+          </a>
         
       </li>
     
       <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">my profile</a>
-        
-      </li>
-    
-      <li class="menu__item ">
-
-        
-          <a class="menu__link" href="#">projects</a>
+          <a class="menu__link   " href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">projects</span>
+          </a>
         
       </li>
     
@@ -78,43 +109,55 @@
         
           
 
-          <a class="menu__link menu__link--toggler" href="#menu-list-contracts" data-toggle="collapse" aria-expanded="false" aria-controls="menu-list-contracts">contracts</a>
+          <a class="menu__link menu__link--toggler " href="#menu-list-contracts" data-toggle="collapse" aria-expanded="false" aria-controls="menu-list-contracts">
+            <span class="menu__link-icon "></span><span class="menu__link-text">contracts</span>
+          </a>
 
           
   <ul id=menu-list-contracts class="menu__list menu__list--level--two collapse">
     
-      <li class="menu__item item--liststyle item--liststyle--green">
+      <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">active</a>
+          <a class="menu__link menu__link--level--two  " href="#">
+            <span class="menu__link-icon menu__link-icon--liststyle menu__link-icon--liststyle--green"></span><span class="menu__link-text">active</span>
+          </a>
         
       </li>
     
-      <li class="menu__item item--liststyle item--liststyle--blue">
+      <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">pending</a>
+          <a class="menu__link menu__link--level--two  " href="#">
+            <span class="menu__link-icon menu__link-icon--liststyle menu__link-icon--liststyle--blue"></span><span class="menu__link-text">pending</span>
+          </a>
         
       </li>
     
-      <li class="menu__item item--liststyle item--liststyle--purple">
+      <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">disputes</a>
+          <a class="menu__link menu__link--level--two  " href="#">
+            <span class="menu__link-icon menu__link-icon--liststyle menu__link-icon--liststyle--purple"></span><span class="menu__link-text">disputes</span>
+          </a>
         
       </li>
     
-      <li class="menu__item item--liststyle item--liststyle--orange">
+      <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">drafts</a>
+          <a class="menu__link menu__link--level--two  " href="#">
+            <span class="menu__link-icon menu__link-icon--liststyle menu__link-icon--liststyle--orange"></span><span class="menu__link-text">drafts</span>
+          </a>
         
       </li>
     
-      <li class="menu__item item--liststyle item--liststyle--grey">
+      <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">closed</a>
+          <a class="menu__link menu__link--level--two  " href="#">
+            <span class="menu__link-icon menu__link-icon--liststyle menu__link-icon--liststyle--grey"></span><span class="menu__link-text">closed</span>
+          </a>
         
       </li>
     
@@ -126,25 +169,139 @@
       <li class="menu__item ">
 
         
-          <a class="menu__link" href="#">settings</a>
+          <a class="menu__link   " href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">settings</span>
+          </a>
         
       </li>
     
   </ul>
 
-</nav>
+
+    
+  <ul  class="menu__list menu__list--help ">
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link   menu__link--help" href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">F.A.Q.</span>
+          </a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link   menu__link--help" href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">Guide</span>
+          </a>
+        
+      </li>
+    
+      <li class="menu__item ">
+
+        
+          <a class="menu__link   menu__link--help" href="#">
+            <span class="menu__link-icon "></span><span class="menu__link-text">Help</span>
+          </a>
+        
+      </li>
+    
+  </ul>
+
+
+    <div class="menu__block menu__sign-out">
+      <a class="button button--theme--empty button--sign-out" href="#">Sign out</a>
+    </div>
+  </nav>
+
+  <div id="menu-lining" class="menu__lining"></div>
+</div>
+
+
+    <div class="content">
+      <header class="header display__header">
+  <div class="search header__search">
+    <input id="header-search" type="text" class="search__input" required>
+    <label for="header-search" class="search__label">Search project, payment, transaction...</label>
+  </div>
+
+  <div class="header__toolbar">
+    <ul class="infographics header__infographics">
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">2</span>
+        <span class="infographics__line">Projects</span>
+      </li>
+
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">5089.62</span>
+        <span class="infographics__line">ETH Invested</span>
+      </li>
+
+      <li class="infographics__item">
+        <span class="infographics__line infographics__line--emphasis">15.84</span>
+        <span class="infographics__line">Jot balance</span>
+      </li>
+    </ul>
+
+    <div class="header__toolbar-item">
+      <a id="menu-toggler" href="#" class="toggle header__toggle">Side menu toggler</a>
+    </div>
+
+    <div class="header__toolbar-item">
+      <a href="#" class="logotype header__logotype">
+        <img class="header__logotype-img" src="assets/imgs/logotype.png" alt="Jury.Online Logotype" width="110" height="20">
+      </a>
+    </div>
+
+    <ul class="tools header__tools header__toolbar-item">
+    </ul>
+
+    <div class="header__add-jot">
+      <a href="#" class="button button--theme--bright">Add Jot</a>
+    </div>
+
+    <div class="ethereum-net header__ethereum-net">
+      <img class="ethereum-net__img" src="assets/imgs/fox-placeholder.png" alt="Awesome fox">
+      <span class="ethereum-net__text">Ethereum Nain Net</span>
+    </div>
+  </div>
+
+</header>
+
+
+      
+  <div class="container dashboard">
+    <div class="row">
+      <div class="col-12">
+        <h1>Test</h1>
+      </div>
+
+      <p class="col-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p class="col-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <p class="col-12">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
 
   </div>
 
+    </div>
 
-  
+  </div>
 
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
