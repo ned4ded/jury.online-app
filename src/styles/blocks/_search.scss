@@ -1,34 +1,103 @@
 .search {
+  $line-offset: 0px;
+  $icon-width: 17px;
+  $icon-mg: 15px;
+  $icon-offset: $icon-width + $icon-mg;
+
   position: relative;
-  min-width: 375px;
   z-index: 1;
 
-  &__label {
-    display: block;
+  min-width: 315px;
+  padding-left: $icon-offset;
+
+  &__input {
     position: absolute;
-    top: 50%;
-    left: 7px;
-    width: calc(100% - 7px);
-    transform: translateY(-50%);
-    font-family: $ff-monserrat;
-    font-weight: 500;
-    font-size: 17px;
-    color: #0c3755;
+
+    display: block;
+
+    width: calc(100% - #{$icon-width});
+    height: 100%;
+    padding: 0;
+    padding: 2px 0;
+
+    color: $bg-darkest;
+    border: none;
+    background-color: transparent;
+
+    @include make-ff-nova(17px, 300);
+
+    &:invalid {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+
+    width: auto;
     margin: 0;
+
+    transition: color ease-in .1s;
+
+    color: $bg-darkest;
+
+    line-height: 33px;
+
+    @include make-ff-nova(17px, 300);
+
+    .search__input:focus ~ & {
+      color: transparent;
+    }
+
+    .search__input:valid ~ & {
+      color: transparent;
+    }
+  }
+
+
+  &__label {
+    position: absolute;
     z-index: -1;
+    top: 50%;
+    left: $icon-offset + $line-offset;
+
+    display: block;
+
+    width: calc(100% - #{$icon-offset});
+    height: 100%;
+    margin: 0;
+
     transition: color .1s ease-in;
+    transform: translateY(-50%);
+
+    color: $bg-darkest;
+
+    @include make-ff-nova(17px, 300);
 
 
-    &:before {
-      content: '';
-      display: block;
+    &:before,
+    &:after {
       position: absolute;
-      bottom: -2px;
-      left: -7px;
-      width: 0%;
+      bottom: 0;
+      left: -$line-offset;
+
+      display: block;
+
+      width: calc(100% + #{$line-offset});
       height: 1px;
-      background-color: #0c3755;
+
+      content: '';
+
+      background-color: rgba($bg-darkest, .2);
+    }
+
+    &:after {
+      width: 0%;
+
       transition: width .2s ease-in;
+
+      background-color: #0c3755;
     }
 
     .search__input:invalid ~ & {
@@ -38,8 +107,8 @@
     .search__input:focus ~ & {
       color: transparent;
 
-      &:before {
-        width: calc(100% + 7px);
+      &:after {
+        width: calc(100% + #{$line-offset});
       }
     }
 
@@ -49,25 +118,15 @@
   }
 
 
-  &__input {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    display: block;
-    width: 100%;
-    padding: 2px 5px;
-    font-family: $ff-monserrat;
-    font-weight: 500;
-    font-size: 17px;
-    color: #0c3755;
 
-    &:invalid {
-      outline: none;
-      box-shadow: none;
-    }
 
-    &:active {
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
 
-    }
+    max-width: $icon-width;
+
+    transform: translate( calc(-100% - #{$icon-mg}), -50%);
   }
 }

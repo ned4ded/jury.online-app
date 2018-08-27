@@ -1,11 +1,13 @@
+{% import 'partials/icon.njk' as icon %}
+{% import 'partials/search-bar.njk' as search %}
+
 <header class="header display__header">
-  <div class="search header__search">
-    <input id="header-search" type="text" class="search__input" required>
-    <label for="header-search" class="search__label">Search project, payment, transaction...</label>
+  <div class="header__block header__search">
+    {{ search.make() }}
   </div>
 
-  <div class="header__toolbar">
-    <ul class="infographics header__infographics">
+  <div class="header__block header__infographics">
+    <ul class="infographics">
       <li class="infographics__item">
         <span class="infographics__line infographics__line--emphasis">2</span>
         <span class="infographics__line">Projects</span>
@@ -22,6 +24,12 @@
       </li>
     </ul>
 
+    <div class="header__add-jot">
+      <a href="#" class="button button--theme--bright">Add Jot</a>
+    </div>
+  </div>
+
+  <div class="header__block header__toolbar">
     <div class="header__toolbar-item">
       <a id="menu-toggler" href="#" class="toggle header__toggle">Side menu toggler</a>
     </div>
@@ -34,10 +42,6 @@
 
     <ul class="tools header__tools header__toolbar-item">
     </ul>
-
-    <div class="header__add-jot">
-      <a href="#" class="button button--theme--bright">Add Jot</a>
-    </div>
 
     <div class="ethereum-net header__ethereum-net">
       <img class="ethereum-net__img" src="assets/imgs/fox-placeholder.png" alt="Awesome fox">

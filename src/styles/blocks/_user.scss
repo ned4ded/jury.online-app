@@ -14,7 +14,7 @@
     height: 60px;
     margin-right: 16px;
 
-    border-radius: 4px;
+    border-radius: 8.5px;
   }
 
   &__info {
@@ -25,10 +25,11 @@
 
   &__name {
     text-transform: capitalize;
+    line-height: 29px;
 
     color: white;
 
-    @include make-ff-nova(24px, 500);
+    @include make-ff-nova(23px, 500);
   }
 
   &__job {

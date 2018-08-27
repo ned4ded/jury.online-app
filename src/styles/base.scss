@@ -7,6 +7,13 @@ body {
 
 .content {
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include respond-to(md) {
+    height: 100vh;
+  }
 }
 
+@import './svg-sprite/base.scss';
 @import './blocks/base.scss';

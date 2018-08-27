@@ -20,7 +20,7 @@ module.exports = gulp.task('svgSprite', function() {
               },
               {
                 removeAttrs: {
-                  attrs: 'fill'
+                  // attrs: 'fill'
                 }
               },
             ]

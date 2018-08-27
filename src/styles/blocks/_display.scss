@@ -6,7 +6,7 @@
   min-height: 100vh;
 
   @include respond-to(md) {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: row nowrap;
   }

@@ -21,7 +21,7 @@
     left: auto;
 
     width: 250px;
-    height: 100%;
+    height: auto;
   }
 
 
@@ -45,7 +45,7 @@
     height: 100%;
     padding: 7px 0;
 
-    background-color: $bg-dark-100;
+    background-image: linear-gradient(to bottom, $bg-darkest 92px, $bg-dark-500);
 
     @include respond-to(md) {
       overflow-y: auto;
@@ -135,14 +135,14 @@
     padding: $p 26px;
 
     @include respond-to(md) {
-      padding: 0 6px 12px;
+      padding: 0 6px 22px;
       margin: 26px 20px 0;
     }
   }
 
   &__user {
     max-width: 185px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   &__item {
@@ -151,7 +151,7 @@
 
   &__list {
     margin-bottom: 5px;
-    padding: 2px 0;
+    padding: 5px 0;
 
     list-style: none;
 
@@ -162,19 +162,21 @@
     &--level {
       &--two {
         margin: 0;
-        padding: 9px 0;
+        padding: 7px 0;
 
         background-color: $bg-darkest;
       }
     }
 
     &--help {
+      padding: 2px 0;
       margin-bottom: 15px;
     }
   }
 
   &__link {
     display: block;
+    position: relative;
 
     min-width: 185px;
     padding: 20px 40px 14px;
@@ -183,10 +185,16 @@
 
     color: rgb(177, 183, 199);
 
-    @include make-ff-nova(15.5px, 400);
+    @include make-ff-nova(14px, 400);
 
     @include respond-to(md) {
-      padding: 21px 24px 7px;
+      padding: 15px 24px 14px 34px;
+      display: flex;
+      align-items: center;
+
+      li:not(:last-of-type) & {
+        margin-bottom: 5px;
+      }
     }
 
     &--level {
@@ -201,8 +209,44 @@
         text-transform: capitalize;
 
         @include respond-to(md) {
-          padding: 7px 0 7px 25px;
+          padding: 5px 0 5px 25px;
         }
+      }
+    }
+
+    &--active {
+      background-color: $bg-dark-300;
+      color: #7b96c4;
+      border-right: 4px solid #85a4be;
+    }
+
+    &[data-message] {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+
+        display: inline-block;
+
+        min-width: 68px;
+        padding: 3px 10px;
+
+        content: attr(data-message);
+        transform: translateY(-50%);
+        text-align: center;
+        text-transform: lowercase;
+
+        color: white;
+        border-radius: 2px;
+        background-color: $color-event;
+        text-shadow: 0 0 7px rgba(1, 13, 46, 0.46);
+
+        font-family: $ff-monserrat;
+        font-size: 11px;
+        font-style: normal;
+        line-height: 1;
       }
     }
 
@@ -211,6 +255,10 @@
 
       @include respond-to(md) {
         text-transform: capitalize;
+
+        line-height: 100%;
+        padding: 5px 35px 5px;
+        margin-bottom: 40px;
       }
 
       & .menu__link-icon { display: none; }
@@ -219,11 +267,17 @@
     &-icon {
       position: relative;
 
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
 
       width: 20px;
       height: 20px;
-      margin-right: 26px;
+      margin-right: 15px;
+
+      .menu__link--level--two & {
+        margin-right: 25px;
+      }
 
       &:before {
         display: block;
@@ -262,6 +316,14 @@
           background-color: #969696;
         }
       }
+
+      & use {
+        fill: rgba(#d3d9e4, .75);
+
+        .menu__link--active & {
+          fill: rgba(#7b96c4, 1);
+        }
+      }
     }
 
     &-text {
@@ -280,21 +342,22 @@
     @include respond-to(md) {
       display: block;
       padding: 35px 44px 27px;
-      background-color: rgb(41, 49, 77);
+      background-color: $bg-dark-400;
       margin-bottom: 7px;
     }
   }
 
-  &__add-contact {
-    @include respond-to(md) {
-      width: 100%;
-      padding-top: 16px;
-      padding-bottom: 16px;
+  &__dropdown-icon {
+    margin-left: 24px;
+    transform: rotate(0);
+    transition: transform ease-in .2s;
 
-      text-transform: uppercase;
+    & use {
+      fill: rgba(white, .62);
+    }
 
-      border: none;
-      background-image: linear-gradient(181deg, #62cfee, #305fb4 99%);
+    [aria-expanded="true"] & {
+      transform: rotate(180deg);
     }
   }
 }

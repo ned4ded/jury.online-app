@@ -1,0 +1,11 @@
+.dashboard {
+  background-color: $bg-light;
+  flex-grow: 1;
+  overflow-y: scroll;
+
+  & > .container {
+    @include respond-to(xl) {
+      max-width: calc( 100% - 40px );
+    }
+  }
+}

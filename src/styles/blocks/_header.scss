@@ -5,7 +5,7 @@
 
   @include respond-to(md) {
     background-image: linear-gradient(to top, rgb(243, 248, 255), rgb(244, 248, 255));
-    padding: 15px 95px 15px 65px;
+    padding: 15px 50px;
     box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
     min-height: 92px;
     align-items: center;
@@ -16,6 +16,7 @@
 
     @include respond-to(md) {
       display: flex;
+      padding: 0;
     }
   }
 
@@ -99,12 +100,8 @@
   }
 
   &__add-jot {
-    display: none;
-
-    @include respond-to(md) {
-      display: block;
-      margin: 0 20px;
-    }
+    display: block;
+    margin: 0 0 0 20px;
   }
 
   &__ethereum-net {
