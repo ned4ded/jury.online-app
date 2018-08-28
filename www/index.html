@@ -81,11 +81,9 @@
               
 
               
-
   <svg class="icon icon__profile ">
     <use xlink:href="assets/sprite.svg#icon__profile"></use>
   </svg>
-
 
               
             </span>
@@ -102,11 +100,9 @@
               
 
               
-
   <svg class="icon icon__calendar ">
     <use xlink:href="assets/sprite.svg#icon__calendar"></use>
   </svg>
-
 
               
             </span>
@@ -123,11 +119,9 @@
               
 
               
-
   <svg class="icon icon__folder ">
     <use xlink:href="assets/sprite.svg#icon__folder"></use>
   </svg>
-
 
               
             </span>
@@ -146,11 +140,9 @@
               
 
               
-
   <svg class="icon icon__feed ">
     <use xlink:href="assets/sprite.svg#icon__feed"></use>
   </svg>
-
 
               
             </span>
@@ -239,11 +231,9 @@
               
 
               
-
   <svg class="icon icon__gear ">
     <use xlink:href="assets/sprite.svg#icon__gear"></use>
   </svg>
-
 
               
             </span>
@@ -318,11 +308,9 @@
   
   <label for="header-search" class="search__label">
     
-
   <svg class="icon icon__search search__icon">
     <use xlink:href="assets/sprite.svg#icon__search"></use>
   </svg>
-
   </label>
 
   <p class="search__text">
@@ -367,11 +355,32 @@
     </div>
 
     <ul class="tools header__tools header__toolbar-item">
+      <li class="tools__item">
+        <a href="#" class="tools__link">
+          
+  <svg class="icon icon__bell tools__icon tools__icon--blob">
+    <use xlink:href="assets/sprite.svg#icon__bell"></use>
+  </svg><span class="tools__name" data-notification="true">Уведомления</span>
+        </a>
+      </li>
+
+      <li class="tools__item">
+        <a href="#" class="tools__link">
+          
+  <svg class="icon icon__blob tools__icon tools__icon--blob">
+    <use xlink:href="assets/sprite.svg#icon__blob"></use>
+  </svg><span class="tools__name" data-notification="false">Диалоги</span>
+        </a>
+      </li>
     </ul>
 
     <div class="ethereum-net header__ethereum-net">
-      <img class="ethereum-net__img" src="assets/imgs/fox-placeholder.png" alt="Awesome fox">
-      <span class="ethereum-net__text">Ethereum Nain Net</span>
+      <a href="#ethereum-net-dropdown" class="ethereum-net__link" data-toggle="collapse" aria-expanded="false" aria-controls="ethereum-net-dropdown">
+        <img class="ethereum-net__img" src="assets/imgs/fox-placeholder.png" alt="Awesome fox"><span class="ethereum-net__text">Ethereum Nain Net</span>
+      </a>
+      <div id="ethereum-net-dropdown" class="ethereum-net__dropdown collapse">
+        <p class="ethereum-net__dropdown-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+      </div>
     </div>
   </div>
 

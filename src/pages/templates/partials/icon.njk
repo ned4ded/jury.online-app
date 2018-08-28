@@ -28,6 +28,14 @@
       link: defaultLink + '#icon__gear',
       baseClass: 'icon__gear'
     },
+    blob: {
+      link: defaultLink + '#icon__blob',
+      baseClass: 'icon__blob'
+    },
+    bell: {
+      link: defaultLink + '#icon__bell',
+      baseClass: 'icon__bell'
+    },
     n: {
       link: defaultLink + '#icon__search',
       baseClass: 'icon__search'
@@ -36,8 +44,6 @@
 %}
 
 {% macro make(name, mods = '') %}
-
   <svg class="icon {{ icons[name].baseClass }} {{mods}}">
     <use xlink:href="{{ icons[name].link }}"></use>
-  </svg>
-{% endmacro %}
+  </svg>{% endmacro %}

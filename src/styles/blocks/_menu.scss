@@ -175,7 +175,8 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
 
     min-width: 185px;
@@ -189,8 +190,6 @@
 
     @include respond-to(md) {
       padding: 15px 24px 14px 34px;
-      display: flex;
-      align-items: center;
 
       li:not(:last-of-type) & {
         margin-bottom: 5px;
