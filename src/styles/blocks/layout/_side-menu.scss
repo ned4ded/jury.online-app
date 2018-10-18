@@ -33,7 +33,8 @@
       margin-top: 5px;
       margin-bottom: 5px;
       flex-grow: 1;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     &--divider {
@@ -265,7 +266,6 @@
 
     &--help {
       padding: 2px 0;
-      margin-bottom: 15px;
     }
   }
 
