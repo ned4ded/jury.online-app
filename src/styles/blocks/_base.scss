@@ -3,9 +3,10 @@
 @import './user.scss';
 @import './search.scss';
 @import './tools.scss';
+@import './dropdown.scss';
 @import './ethereum-net.scss';
+@import 'filter';
+@import 'rec-card';
+@import 'project-card';
 
-@import './display.scss';
-@import './header.scss';
-@import './menu.scss';
-@import './dashboard.scss';
+@import 'layout/base';

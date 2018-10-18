@@ -1,0 +1,12 @@
+{% import "lib/mods.njk" as MODS %}
+
+{% macro make(link, content, id, mods, isOpen = false) %}
+<div class="dropdown{{ MODS.parse(mods) }}">
+  <a href="#{{id}}" class="dropdown__link" data-toggle="collapse" aria-expanded="{{isOpen}}" aria-controls="{{id}}">
+    {{ link | safe }}
+  </a>
+  <div id="{{id}}" class="dropdown__content collapse{{ ' show' if isOpen }}">
+    {{ content | safe }}
+  </div>
+</div>
+{% endmacro %}

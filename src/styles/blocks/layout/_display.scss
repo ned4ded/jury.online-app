@@ -1,0 +1,11 @@
+.display {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-to(md) {
+    flex-grow: 1;
+  }
+}

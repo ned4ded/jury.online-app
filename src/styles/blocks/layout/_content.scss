@@ -1,0 +1,72 @@
+.content {
+  background-color: $bg-light;
+  flex-grow: 1;
+  overflow: auto;
+  position: relative;
+
+  @include respond-to(md) {
+    padding-top: 50px;
+  }
+
+  & > .container {
+    @include respond-to(xl) {
+      max-width: calc( 100% - 40px );
+    }
+  }
+
+  &__narrow {
+    padding-right: 168px;
+    padding-left: 168px;
+  }
+
+  &__section {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: calc(100% - 50px);
+      position: absolute;
+      left: 25px;
+      top: 100%;
+      background-color: #d4d4d4;
+      height: 1px;
+    }
+  }
+
+  &__ticker {
+    position: sticky;
+    bottom: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 62px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    background-color: #f9f9f9;
+    box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(0, 0, 0, 0.09);
+
+    @include make-ff-nova(18px, 500);
+
+    &-item {
+      margin: 0px 33px;
+      white-space: nowrap;
+    }
+
+    &-name {
+      color: $bg-dark-400;
+    }
+
+    &-price {
+      color: #809eb9;
+    }
+  }
+}

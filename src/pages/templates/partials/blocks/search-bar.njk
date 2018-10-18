@@ -1,10 +1,10 @@
-{% import 'partials/icon.njk' as icon %}
+{% import 'lib/icon.njk' as icon %}
 
 
 {% macro make(mods='') %}
 <form action="http://echo.htmlacademy.ru/" method="GET" class="search{{' ' + mods}}">
   <input id="header-search" type="text" class="search__input" required name="search_query">
-  
+
   <label for="header-search" class="search__label">
     {{ icon.make('search', 'search__icon') }}
   </label>

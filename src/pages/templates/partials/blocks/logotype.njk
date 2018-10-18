@@ -1,0 +1,7 @@
+{% import "lib/mods.njk" as MODS %}
+
+{% macro make(mods) %}
+<a href="index.html" class="logotype{{ MODS.parse(mods) }}">
+  <img class="logotype__img" src="assets/imgs/logotype.png" alt="Jury.Online Logotype" width="164" height="30">
+</a>
+{% endmacro %}

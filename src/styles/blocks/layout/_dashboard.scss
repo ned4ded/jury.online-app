@@ -1,14 +1,14 @@
-.display {
+.dashboard {
   position: relative;
 
   overflow: visible;
 
-  min-height: 100vh;
+  height: 100vh;
 
   @include respond-to(md) {
     min-height: 100vh;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
   }
 
   &__header {
@@ -19,7 +19,7 @@
     width: 250px;
   }
 
-  &--blocked {
+  &.active {
     overflow: hidden;
 
     height: 100vh;

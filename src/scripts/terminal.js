@@ -1,18 +1,33 @@
 (() => {
   const $dashboard = $('#display');
   const $lining = $('#menu-lining');
-  const $toggler = $('#menu-toggler');
-  const $menu = $('#menu');
 
+  const $toggler = $('#menu-toggler');
+  const targets = $toggler.data('target').map(t => document.getElementById(t)).filter(n => n);
+
+  const toggle = (t) => {
+    if($(t).hasClass('active')) {
+      $(t).removeClass('active');
+    } else {
+      $(t).addClass('active');
+    }
+    return;
+  }
 
   $toggler.click(function() {
-    $menu.removeClass('menu--collapsed');
-    $dashboard.addClass('display--blocked');
+    targets.forEach(t => {
+      toggle(t);
+    });
+
+    return;
   });
 
   $lining.click(function() {
-    $menu.addClass('menu--collapsed');
-    $dashboard.removeClass('display--blocked');
+    targets.forEach(t => {
+      toggle(t);
+    });
+
+    return;
   });
 
 })();

@@ -4,20 +4,97 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>Test</h1>
+        {% include "partials/filter.njk" %}
       </div>
-
-      <p class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-      <p class="col-12">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
     </div>
 
+    <div class="row mt-5 pb-5 content__section">
+      <div class="col-12 mb-4 d-flex flex-column-reverse">
+        <h2 class="heading">Recommended for You</h2>
+        <p class="heading-caption">Don’t Miss them</p>
+      </div>
+
+      <div class="col-12 d-flex justify-content-between content__narrow">
+        {% for item in ['', '', ''] %}
+        <div class="rec-card">
+          <p class="rec-card__heading">
+            <span class="rec-card__logo"></span>
+            <span class="rec-card__heading-text">
+              GG Rocket <small>First Gaming Market</small>
+            </span>
+          </p>
+          <p class="rec-card__schedule">
+            <span class="rec-card__schedule-name">PRE ICO</span> / 25 D left
+          </p>
+          <div class="rec-card__about">
+            <p class="rec-card__date">20 Jun - 22 sep</p>
+            <p class="rec-card__min-invest"><small>Min Invest:</small> 5 ETH</p>
+          </div>
+          <p class="rec-card__info">
+            <span class="rec-card__rating">
+              <span class="filter__icon filter__icon--star"></span>
+              <span class="filter__icon filter__icon--star"></span>
+              <span class="filter__icon filter__icon--star"></span>
+              <span class="filter__icon filter__icon--star-grey"></span>
+              <span class="filter__icon filter__icon--star-grey"></span>
+              4.5
+            </span>
+
+            <span class="rec-card__tag">KYC</span>
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="row mt-4 pb-4 content__section">
+      <div class="col-12">
+        <div class="vote">
+          <span class="vote__icon"></span>
+          <p class="vote__question">
+            Will a blockchain change the rules of the game?
+          </p>
+          <a href="#" class="vote__btn vote__btn--like">Like</a>
+          <a href="#" class="vote__btn vote__btn--dislike">Dislike</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row mt-5 pb-5">
+      <div class="col-12 mb-3 d-flex flex-column-reverse">
+        <h2 class="heading">ICO Projects</h2>
+        <p class="heading-caption">Discover new</p>
+      </div>
+
+      <div class="col-12 container content__narrow">
+        <div class="row">
+          {% for item in ['','','','','','','',''] %}
+          <div class="col-3">
+            <div class="project-card">
+              <div class="project-card__header">
+                <span class="project-card__logo"></span>
+                <p class="project-card__heading">
+                  <span class="project-card__name">GoodWork</span>
+                  <span class="project-card__type">E-commerce</span>
+                </p>
+                <p class="project-card__state">
+                  <span class="project-card__status">Sealed</span>
+                  <span class="project-card__time-left">15 days left</span>
+                </p>
+              </div>
+
+              <p class="project-card__descr">Ecosystem for remote teams</p>
+
+              <div class="project-card__about">
+                <p class="project-card__date">20 Jul - 30 sep</p>
+                <p class="project-card__min-invest">Min Invest: 2 ETH</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}

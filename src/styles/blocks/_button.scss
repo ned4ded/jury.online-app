@@ -3,17 +3,28 @@
 
   &--theme {
     &--bright {
-      padding: 13px 33px 10px;
-      border-radius: 7px;
+      display: inline-block;
+
+      width: 100%;
+      padding: 21px 0px 18px;
+
+      text-align: center;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      line-height: 1;
+
+
+      color: white;
       background-color: $color-event;
 
-      @include make-ff-nova(17.5px, 600);
+      @include make-ff-nova(18px, bold);
 
-      line-height: 1;
-      letter-spacing: 0.2px;
-      color: white;
-      text-align: center;
-      text-transform: uppercase;
+      @include respond-to(md) {
+        padding: 13px 33px 10px;
+        border-radius: 7px;
+
+        letter-spacing: 0.2px;
+      }
     }
 
     &--empty {
@@ -63,12 +74,6 @@
     }
   }
 
-  &--add {
-    &:before {
-      content: '+ ';
-    }
-  }
-
   &--sign-out {
     width: 189px;
 
@@ -80,21 +85,5 @@
     font-size: 15px;
     font-weight: normal;
 
-  }
-
-  &--add-jot {
-    display: inline-block;
-
-    width: 100%;
-    padding: 21px 0px 18px;
-
-    text-align: center;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-
-    color: white;
-    background-color: $color-event;
-
-    @include make-ff-nova(18px, bold);
   }
 }

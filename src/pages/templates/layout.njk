@@ -14,24 +14,41 @@
 
 <body>
   <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <div id="display" class="display">
-    {% include "partials/menu.njk" %}
+  <div id="dashboard" class="dashboard">
+    {% include "partials/header.njk" %}
 
-    <div class="content">
-      {% include "partials/header.njk" %}
+    <div class="display">
+      {% include "partials/side-menu.njk" %}
 
-      <div class="dashboard container-fluid">
-        {% block content %} {% endblock %}
+      <div class="content">
+          {% block content %} {% endblock %}
+
+        <ul class="content__ticker">
+          {% for item in [
+            { name: 'ETH', value: '$1.2792'},
+            { name: 'JOT', value: '$1.2792'},
+            { name: 'ELS', value: '$0.2792'},
+            { name: 'LNT', value: '$0.2792'},
+            { name: 'ETH', value: '$1.2792'},
+            { name: 'JOT', value: '$1.2792'},
+            { name: 'ELS', value: '$0.2792'},
+            { name: 'LNT', value: '$0.2792'},
+            { name: 'ETH', value: '$1.2792'},
+            { name: 'JOT', value: '$1.2792'}
+            ] %}
+
+            <li class="content__ticker-item">
+              <span class="content__ticker-name">{{ item.name }}</span>
+              <span class="content__ticker-price">{{ item.value }}</span>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-
     </div>
-
   </div>
-
-
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

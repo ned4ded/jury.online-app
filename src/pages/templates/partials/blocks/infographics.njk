@@ -1,0 +1,14 @@
+{% import "lib/mods.njk" as MODS %}
+
+{% macro make(data, mods = false) %}
+  <ul class="infographics{{ MODS.parse( mods ) }}">
+    {% for item in data %}
+
+    <li class="infographics__item">
+      <span class="infographics__line infographics__line--emphasis"> {{ item.count }}</span>
+      <span class="infographics__line">{{ item.name | capitalize }}</span>
+    </li>
+
+    {% endfor %}
+  </ul>
+{% endmacro %}

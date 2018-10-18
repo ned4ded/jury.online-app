@@ -1,0 +1,213 @@
+.header {
+  position: relative;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  background-color: rgb(49, 50, 76);
+  background-image: linear-gradient(to right, $bg-dark-400, $bg-dark-100);
+
+  @include respond-to(md) {
+    align-items: stretch;
+
+    min-height: 92px;
+
+    background-color: transparent;
+    background-image: linear-gradient(to top, rgb(243, 248, 255), rgb(244, 248, 255));
+    box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
+  }
+
+  & > .container-fluid {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  &__block {
+  }
+
+  &__infographics {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: none;
+    align-items: stretch;
+
+    width: 100%;
+    min-height: 100%;
+
+    background-image: linear-gradient(to right, $bg-dark-400, $bg-dark-100);
+
+    @include respond-to(md) {
+      width: auto;
+      position: static;
+
+      display: flex;
+
+      min-height: 0;
+      padding: 0;
+      flex-grow: 1;
+
+      background-image: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__infographics .infographics {
+    width: 73.5%;
+    min-width: 275px;
+
+    @include respond-to(md) {
+      width: auto;
+      min-width: 0;
+    }
+  }
+
+  &__add-jot {
+    display: block;
+
+    width: 26.5%;
+
+    @include respond-to(md) {
+      width: auto;
+      height: auto;
+      margin: 0 0 0 20px;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      height: 100%;
+
+      @include respond-to(md) {
+        height: auto;
+      }
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &__toolbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 18px 5px;
+
+    @include respond-to(md) {
+      justify-content: flex-end;
+
+      min-width: 300px;
+      width: auto;
+      padding: 22px 20px 19px;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    &-item {
+      width: 33.333%;
+
+      @include respond-to(md) {
+        width: auto;
+      }
+    }
+  }
+
+  &__toggle {
+    display: block;
+
+    width: 25px;
+    height: 20px;
+
+    background-image: url('../assets/imgs/icon__burger.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    font-size: 0;
+
+    @include respond-to(md) {
+      display: none;
+    }
+
+    &--small {
+      display: none;
+      filter: invert(75%);
+      width: 24px;
+      height: 15px;
+      background-size: 100% 100%;
+
+      @include respond-to(md) {
+        display: inline-block;
+      };
+    }
+  }
+
+  &__logotype {
+    display: none;
+
+    @include respond-to(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: $side-bar-w;
+      max-width: $side-bar-w;
+
+      background-color: $bg-dark-400;
+    }
+
+    &--mobile {
+      display: block;
+
+      text-align: center;
+
+      @include respond-to(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    display: none;
+
+    @include respond-to(md) {
+      display: flex;
+      align-items: flex-start;
+      flex-flow: column nowrap;
+      justify-content: center;
+      min-width: 225px;
+    }
+  }
+
+  &__ethereum-net {
+    display: none;
+
+    @include respond-to(md) {
+      display: flex;
+
+      margin: 0 20px;
+    }
+  }
+}

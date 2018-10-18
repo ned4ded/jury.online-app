@@ -1,0 +1,50 @@
+{% import 'partials/user.njk' as user %}
+{% import 'partials/menu/main-menu.set.njk' as menu %}
+{% import 'partials/menu/main-menu-make-list.macro.njk' as list %}
+{% import 'lib/list.njk' as newList %}
+
+<div id="side-menu" class="side-menu">
+  <div class="side-menu__section side-menu__section--divider side-menu__profile">
+    {{ user.modify('menu__user') }}
+
+    <a class="button button--theme--empty side-menu__add-contact" href="#">Add contract</a>
+  </div>
+
+  <div class="side-menu__section side-menu__section--fluid side-menu__section--flexible">
+    {% macro li(item) %}
+    {{ item.name }}
+    {% endmacro %}
+
+    {# {{ newList.make([{
+      name: 'name',
+      value: 'value'
+    }], li, 'side-menu-nav') }} #}
+    {{ list.make( menu.main ) }}
+    
+    {{ list.make( menu.help, 'menu__list--help' ) }}
+  </div>
+
+  <div class="side-menu__section side-menu__section--bottom">
+    <a class="button button--theme--empty-dimmed button--sign-out" href="#">Sign out</a>
+  </div>
+</div>
+
+{# <div  class="menu">
+
+  <nav id="side-menu" class="menu__side-menu">
+    <div class="menu__block menu__block--divider menu__profile">
+      {{ user.modify('menu__user') }}
+
+      <a class="button button--theme--empty button--add menu__add-contact" href="#">Add contract</a>
+    </div>
+
+    {{ list.make( menu.main ) }}
+
+    {{ list.make( menu.help, 'menu__list--help' ) }}
+
+    <div class="menu__block menu__sign-out">
+    </div>
+  </nav>
+
+  <div id="menu-lining" class="menu__lining"></div>
+</div> #}

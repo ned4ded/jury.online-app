@@ -1,4 +1,4 @@
-{% import 'partials/icon.njk' as icon %}
+{% import 'lib/icon.njk' as icon %}
 
 {% macro make(items, mods, id) %}
   <ul {{ 'id=' + id if id }} class="menu__list{{ ' ' + mods }}{{ ' collapse' if id }}">

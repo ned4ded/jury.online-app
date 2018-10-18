@@ -1,0 +1,133 @@
+.rec-card {
+  width: 377px;
+  min-height: 209px;
+  border-radius: 10px;
+  background-image: linear-gradient(178deg, #c28cda, #8b55c4);
+  padding: 15px 17px;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    width: 205px;
+    height: 206px;
+
+    background-image: url('../assets/imgs/rec-card-bg.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/imgs/icon-rec-card-placeholder.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__heading {
+    display: inline-flex;
+    margin-bottom: 10px;
+
+    &-text {
+      @include make-ff-nova(26px, 500);
+      text-shadow: 0.7px 0.7px 4px rgba(0, 0, 0, 0.09);
+      color: white;
+      display: flex;
+      flex-flow: column nowrap;
+      line-height: 1;
+      margin-left: 12px;
+
+      & small {
+        font-size: 17px;
+        text-shadow: 0.7px 0.7px 4px rgba(0, 0, 0, 0.09);
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__schedule {
+    margin: 0 -17px 10px;
+    padding: 13px 17px 10px;
+    background-color: #7a6193;
+    line-height: 1;
+    color: white;
+    @include make-ff-nova(19px, 500);
+
+    &-name {
+      color: #b3d7ff;
+    }
+  }
+
+  &__about {
+    @include make-ff-nova(15px, 500);
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2.8px 2.8px 5px rgba(28, 12, 67, 0.14);
+
+    & small {
+      font-weight: 300;
+      font-size: 100%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__date {
+    margin-bottom: 0;
+    line-height: 1.15;
+  }
+
+  &__min-invest {
+    margin-bottom: 0;
+    line-height: 1.15;
+  }
+
+  &__rating {
+    display: inline-flex;
+    margin-bottom: 0;
+    align-items: center;
+    color: white;
+    @include make-ff-nova(14px);
+    border-radius: 13px;
+    background-color: rgba($bg-dark-400, .5);
+    padding: 7px 14px 5px;
+    line-height: 1;
+
+    & span {
+      margin-right: 5px;
+      margin-bottom: 4px;
+
+      &-last-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__tags {
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+
+  &__tag {
+    margin-left: 10px;
+    background-color: rgba($bg-dark-400, .5);
+    border-radius: 100%;
+    padding: 5px 4px 3px;
+    @include make-ff-nova(12px);
+    text-shadow: 2.1px 2.1px 22.1px rgba(224, 237, 245, 0.35);
+    color: #dc6f1f;
+    line-height: 21px;
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}

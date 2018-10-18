@@ -5,13 +5,78 @@ body {
   min-width: 350px;
 }
 
-.content {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
 
-  @include respond-to(md) {
-    height: 100vh;
+.logotype {
+  &__img {
+    margin-top: 10px;
+  }
+}
+
+.heading {
+  margin-bottom: 0;
+
+  color: $bg-dark-400;
+
+  @include make-ff-nova(23px, 500);
+
+  &-caption {
+    margin-bottom: 5px;
+
+    color: $bg-dark-400;
+
+    line-height: 1;
+
+    @include make-ff-nova(18px);
+  }
+}
+
+.vote {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(0, 0, 0, 0.09);
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 62px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include make-ff-nova(17px, 500);
+
+  &__question {
+    margin: 0 90px 0 30px;
+  }
+
+  &__icon {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    width: 39px;
+    height: 39px;
+    background-image: url('../assets/imgs/icon-puzzles.png');
+  }
+
+  &__btn {
+    margin: 0 7px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+
+    &--like {
+      width: 20px;
+      height: 22px;
+      background-image: url('../assets/imgs/icon-like.png');
+    }
+
+    &--dislike {
+      width: 20px;
+      height: 22px;
+      background-image: url('../assets/imgs/icon-dislike.png');
+    }
   }
 }
 
