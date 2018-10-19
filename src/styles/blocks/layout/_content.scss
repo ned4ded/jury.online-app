@@ -68,7 +68,7 @@
   &__rec-cards {
     @media (max-width: 1600px) {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
     }
   }
 
