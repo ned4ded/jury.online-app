@@ -5,7 +5,7 @@
   flex-flow: row wrap;
   justify-content: center;
 
-  @include respond-to(md) {
+  @include respond-to(lg) {
     flex-flow: row nowrap;
   }
 
@@ -15,7 +15,7 @@
     flex-flow: column nowrap;
     align-items: center;
 
-    @include respond-to(md) {
+    @include respond-to(lg) {
       align-items: flex-end;
       padding: 0 20px;
     }
@@ -29,7 +29,7 @@
 
     @include make-ff-nova(11px, 300);
 
-    @include respond-to(md) {
+    @include respond-to(lg) {
       letter-spacing: 0.8px;
 
       color: rgb(52,54,77);
@@ -44,7 +44,7 @@
       font-size: 18px;
       font-weight: 500;
 
-      @include respond-to(md) {
+      @include respond-to(lg) {
         font-size: 28.5px;
         font-weight: 700;
       }

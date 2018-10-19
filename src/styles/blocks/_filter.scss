@@ -15,6 +15,10 @@
     border-radius: 10px;
     background-color: white;
     box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(0, 0, 0, 0.09);
+
+    @media (max-width: 1300px) {
+      flex-flow: row wrap;
+    }
   }
 
   &__bottom {
@@ -34,6 +38,13 @@
     border-radius: 10px;
     box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
 
+    @media (max-width: 1830px) {
+      margin-left: 0;
+      width: 100%;
+      width: 100%;
+      flex-flow: row wrap;
+    }
+
     &-section {
       display: inline-flex;
       align-items: center;
@@ -46,6 +57,8 @@
       border-right: 1px solid rgba($bg-dark-400, .1);
 
       @include make-ff-nova(16px, 500);
+
+      min-height: 70px;
     }
   }
 
@@ -55,8 +68,13 @@
     align-self: stretch;
 
     width: 235px;
+    min-height: 60px;
 
     border-right: 1px solid rgba($bg-dark-400, .1);
+
+    @media (max-width: 1300px) {
+      border-right: none;
+    }
 
     &-input {
       width: 220px;
@@ -80,8 +98,18 @@
     list-style: none;
     align-items: stretch;
 
+    min-height: 60px;
+
     &--bottom {
       padding: 0;
+
+      @media (max-width: 992px) {
+        border-right: none;
+      }
+
+      @media (max-width: 1550px) {
+        border-bottom: 1px solid rgba($bg-dark-400, .1);
+      }
     }
 
     &-item {
@@ -89,6 +117,12 @@
       align-items: center;
 
       padding: 0px 27px;
+    }
+
+    &--top &-item {
+      @media (max-width: 1850px) {
+        padding: 0px 10px;
+      }
     }
 
     &-btn {
@@ -105,6 +139,8 @@
       line-height: 1;
 
       @include make-ff-nova(17px, 500);
+
+      white-space: nowrap;
 
       &:hover {
         text-decoration: none;
@@ -132,11 +168,15 @@
     display: inline-flex;
     justify-content: flex-end;
 
-    min-width: 140px;
+    // min-width: 140px;
     margin: 0;
     padding: 0;
 
     list-style: none;
+
+    @media (max-width: 1300px) {
+      display: none;
+    }
 
     &-item {
       display: flex;
@@ -144,6 +184,10 @@
 
       margin-left: 30px;
       padding: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 
@@ -208,6 +252,15 @@
   }
 
   &__rating {
+    @media (max-width: 767px) {
+      flex-grow: 1;  
+    }
+
+    @media (max-width: 1550px) {
+      border-right: none;
+      border-bottom: 1px solid rgba(52, 54, 77, 0.1);
+    }
+
     & span {
       margin-left: 5px;
 
@@ -219,6 +272,7 @@
 
   &__checkbox {
     border-right: none;
+
     & input {
       margin-left: 10px;
     }
@@ -226,6 +280,20 @@
 
   &__range {
     padding-right: 14px;
+    flex-grow: 1;
+
+    @media (max-width: 992px) {
+      border-bottom: 1px solid rgba(52, 54, 77, 0.1);
+      border-right: none;
+    }
+
+    @media (max-width: 1199px) {
+      width: auto;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1550px) {
+      width: 50%;
+    }
 
     &-input {
       display: inline-flex;
@@ -241,6 +309,8 @@
       color: $bg-dark-400;
 
       font-weight: 600;
+
+      white-space: nowrap;
     }
 
     &-line {

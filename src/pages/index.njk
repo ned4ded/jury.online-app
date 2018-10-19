@@ -14,7 +14,7 @@
         <p class="heading-caption">Don’t Miss them</p>
       </div>
 
-      <div class="col-12 d-flex justify-content-between content__narrow">
+      <div class="col-12 d-flex align-items-center content__rec-cards">
         {% for item in ['', '', ''] %}
         <div class="rec-card">
           <p class="rec-card__heading">
@@ -67,33 +67,29 @@
         <p class="heading-caption">Discover new</p>
       </div>
 
-      <div class="col-12 container content__narrow">
-        <div class="row">
-          {% for item in ['','','','','','','',''] %}
-          <div class="col-3">
-            <div class="project-card">
-              <div class="project-card__header">
-                <span class="project-card__logo"></span>
-                <p class="project-card__heading">
-                  <span class="project-card__name">GoodWork</span>
-                  <span class="project-card__type">E-commerce</span>
-                </p>
-                <p class="project-card__state">
-                  <span class="project-card__status">Sealed</span>
-                  <span class="project-card__time-left">15 days left</span>
-                </p>
-              </div>
-
-              <p class="project-card__descr">Ecosystem for remote teams</p>
-
-              <div class="project-card__about">
-                <p class="project-card__date">20 Jul - 30 sep</p>
-                <p class="project-card__min-invest">Min Invest: 2 ETH</p>
-              </div>
-            </div>
+      <div class="col-12 content__project-cards">
+        {% for item in ['','','','','','','',''] %}
+        <div class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__logo"></span>
+            <p class="project-card__heading">
+              <span class="project-card__name">GoodWork</span>
+              <span class="project-card__type">E-commerce</span>
+            </p>
+            <p class="project-card__state">
+              <span class="project-card__status">Sealed</span>
+              <span class="project-card__time-left">15 days left</span>
+            </p>
           </div>
-          {% endfor %}
+
+          <p class="project-card__descr">Ecosystem for remote teams</p>
+
+          <div class="project-card__about">
+            <p class="project-card__date">20 Jul - 30 sep</p>
+            <p class="project-card__min-invest">Min Invest: 2 ETH</p>
+          </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>

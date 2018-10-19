@@ -19,7 +19,7 @@
 
       @include make-ff-nova(18px, bold);
 
-      @include respond-to(md) {
+      @include respond-to(lg) {
         padding: 13px 33px 10px;
         border-radius: 7px;
 

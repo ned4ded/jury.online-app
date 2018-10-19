@@ -14,11 +14,6 @@
     }
   }
 
-  &__narrow {
-    padding-right: 168px;
-    padding-left: 168px;
-  }
-
   &__section {
     position: relative;
 
@@ -68,5 +63,18 @@
     &-price {
       color: #809eb9;
     }
+  }
+
+  &__rec-cards {
+    @media (max-width: 1600px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__project-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
 }
