@@ -1225,7 +1225,8 @@ body {
           justify-content: space-between;
   background-color: #31324c;
   background-image: -webkit-gradient(linear, left top, right top, from(#34364d), to(#292d46));
-  background-image: linear-gradient(to right, #34364d, #292d46); }
+  background-image: linear-gradient(to right, #34364d, #292d46);
+  min-height: 60px; }
   @media (min-width: 992px) {
     .header {
       -webkit-box-align: stretch;

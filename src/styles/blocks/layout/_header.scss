@@ -7,6 +7,7 @@
 
   background-color: rgb(49, 50, 76);
   background-image: linear-gradient(to right, $bg-dark-400, $bg-dark-100);
+  min-height: 60px;
 
   @include respond-to(lg) {
     align-items: stretch;
