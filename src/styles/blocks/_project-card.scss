@@ -1,12 +1,17 @@
 .project-card {
-  width: 285px;
-  min-height: 154px;
-  margin: 16px 19px;
-  padding: 12px;
+  margin: 16px 0;
+  width: 100%;
 
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
+  @include respond-to(sm) {
+    margin: 16px 19px;
+    padding: 12px;
+    width: 285px;
+    min-height: 154px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
+
+  }
 
   &__header {
     display: flex;
@@ -86,24 +91,46 @@
   }
 
   &__descr {
-    margin-bottom: 10px;
-    padding-bottom: 8px;
+    margin: 0;
+    padding: 10px 15px 8px;
 
     color: #31344c;
     border-bottom: 1px solid rgba(#a7a7a7, .4);
 
     line-height: 1.1;
 
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
     @include make-ff-nova(14px, 500);
+
+    @include respond-to(sm) {
+      margin-bottom: 10px;
+      padding: 0px 0px 8px;
+      background-color: transparent;
+    }
   }
 
   &__about {
+    margin: 0;
+    padding: 10px 15px 8px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
     display: flex;
     flex-flow: column nowrap;
 
     color: $bg-dark-400;
 
     @include make-ff-nova(15px, 500);
+
+    @include respond-to(sm) {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
   }
 
   &__date {

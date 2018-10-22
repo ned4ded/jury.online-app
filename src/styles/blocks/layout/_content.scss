@@ -77,4 +77,12 @@
     flex-flow: row wrap;
     justify-content: space-around;
   }
+
+  &__filter {
+    padding: 0;
+
+    @include respond-to(md) {
+      padding: 0px 15px;
+    }
+  }
 }

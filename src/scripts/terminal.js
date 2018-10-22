@@ -1,5 +1,5 @@
 (() => {
-  const $dashboard = $('#display');
+  const $dashboard = $('#dashboard');
   const $lining = $('#menu-lining');
 
   const $toggler = $('#menu-toggler');
@@ -19,6 +19,8 @@
       toggle(t);
     });
 
+    $dashboard.addClass('overflow-hidden');
+
     return;
   });
 
@@ -26,6 +28,8 @@
     targets.forEach(t => {
       toggle(t);
     });
+
+    $dashboard.removeClass('overflow-hidden');
 
     return;
   });

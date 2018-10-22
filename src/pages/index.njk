@@ -3,13 +3,13 @@
 {% block content %}
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 content__filter">
         {% include "partials/filter.njk" %}
       </div>
     </div>
 
-    <div class="row mt-5 pb-5 content__section">
-      <div class="col-12 mb-4 d-flex flex-column-reverse">
+    <div class="row mt-sm-5 pb-5 content__section">
+      <div class="col-12 mb-4 d-none d-sm-flex flex-column-reverse">
         <h2 class="heading">Recommended for You</h2>
         <p class="heading-caption">Don’t Miss them</p>
       </div>
@@ -62,7 +62,7 @@
 
 
     <div class="row mt-5 pb-5">
-      <div class="col-12 mb-3 d-flex flex-column-reverse">
+      <div class="col-12 mb-3 d-none d-sm-flex flex-column-reverse">
         <h2 class="heading">ICO Projects</h2>
         <p class="heading-caption">Discover new</p>
       </div>
